@@ -1496,6 +1496,27 @@ footer{background:#130d20;padding:46px 0}
     object-position:center !important;
   }
 }
+
+/* Mobile gallery: enforce 16:9 for every gallery image */
+@media (max-width: 767px) {
+  #gallery img,
+  .gallery-grid img,
+  .gallery img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+  #gallery .gallery-item,
+  .gallery-grid > *,
+  .gallery .gallery-item {
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+}
 </style>
 </head>
 <body>
