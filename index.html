@@ -1460,6 +1460,43 @@ footer{background:#130d20;padding:46px 0}
   #gallery .gallery figure:nth-child(7) img{object-position:center center !important;}
 }
 </style>
+
+<style id="v15-mobile-gallery-16x9">
+/* Mobile gallery: every image uses the same 16:9 frame. Desktop layout is unchanged. */
+@media (max-width: 600px){
+  #gallery .gallery{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    grid-template-rows:none !important;
+    grid-auto-rows:auto !important;
+    gap:12px !important;
+    overflow:visible !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+  #gallery .gallery figure,
+  #gallery .gallery figure:nth-child(n),
+  #gallery .gallery figure:nth-child(4){
+    display:block !important;
+    grid-column:1 !important;
+    grid-row:auto !important;
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    aspect-ratio:16 / 9 !important;
+    margin:0 !important;
+    border-radius:12px !important;
+    overflow:hidden !important;
+  }
+  #gallery .gallery figure img,
+  #gallery .gallery figure:nth-child(4) img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center !important;
+  }
+}
+</style>
 </head>
 <body>
 <nav><div class="wrap nav">
@@ -1531,7 +1568,7 @@ footer{background:#130d20;padding:46px 0}
 <div class="result">2nd Place at 2024 Singapore National Championships</div>
 <div class="result">1st Place at 2024 Singapore Inline Tournament</div>
 <div class="result">3rd Place at 2025 Thailand Sliders Championships</div>
-<div class="result">3 Gold Medals at 2024 Singapore National Championships</div></div>
+</div>
 </div>
 </div>
 </section>
